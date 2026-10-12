@@ -1,0 +1,905 @@
+{
+  "revision": 2,
+  "programs": {
+    "Blackmagic": [
+      {
+        "name": "ATEM Switchers",
+        "homepage": "https://www.blackmagicdesign.com/support/family/atem-live-production-switchers",
+        "version": {
+          "method": "html",
+          "pattern": "<article[^>]*software-download=\\\"(?<aux>[^\\\"]+)\\\"[^>]*name=\\\"(?:Blackmagic )?ATEM Switchers (?<version>[\\d\\.]+)(?: Update)?\\\"[^>]*>",
+          "url": "https://www.blackmagicdesign.com/support/partial/downloads"
+        },
+        "download": {
+          "method": "href",
+          "template": "https://www.blackmagicdesign.com/support/download/${aux}/Windows",
+          "selector": "a[ng-click=\"downloadNow()\"]"
+        }
+      },
+      {
+        "name": "Camera",
+        "homepage": "https://www.blackmagicdesign.com/support/family/professional-cameras",
+        "version": {
+          "method": "html",
+          "pattern": "<article[^>]*software-download=\\\"(?<aux>[^\\\"]+)\\\"[^>]*name=\\\"(?:Blackmagic )?Camera (?<version>[\\d\\.]+)(?: Update)?\\\"[^>]*>",
+          "url": "https://www.blackmagicdesign.com/support/partial/downloads"
+        },
+        "download": {
+          "method": "href",
+          "template": "https://www.blackmagicdesign.com/support/download/${aux}/Windows",
+          "selector": "a[ng-click=\"downloadNow()\"]"
+        }
+      },
+      {
+        "name": "Converters",
+        "homepage": "https://www.blackmagicdesign.com/support/family/broadcast-and-atem-converters",
+        "version": {
+          "method": "html",
+          "pattern": "<article[^>]*software-download=\\\"(?<aux>[^\\\"]+)\\\"[^>]*name=\\\"(?:Blackmagic )?Converters (?<version>[\\d\\.]+)(?: Update)?\\\"[^>]*>",
+          "url": "https://www.blackmagicdesign.com/support/partial/downloads"
+        },
+        "download": {
+          "method": "href",
+          "template": "https://www.blackmagicdesign.com/support/download/${aux}/Windows",
+          "selector": "a[ng-click=\"downloadNow()\"]"
+        }
+      },
+      {
+        "name": "DaVinci Resolve",
+        "homepage": "https://www.blackmagicdesign.com/support/family/davinci-resolve-and-fusion",
+        "version": {
+          "method": "html",
+          "pattern": "<article[^>]*software-download=\\\"(?<aux>[^\\\"]+)\\\"[^>]*name=\\\"(?:Blackmagic )?DaVinci Resolve (?<version>[\\d\\.]+)(?: Update)?\\\"[^>]*>",
+          "url": "https://www.blackmagicdesign.com/support/partial/downloads"
+        },
+        "download": {
+          "method": "fetch",
+          "url": "https://www.blackmagicdesign.com/api/register/us/download/66b77a9a0ebb4964b758e0214264fadf",
+          "opts": {
+            "headers": {
+              "accept": "application/json, text/plain, */*",
+              "accept-language": "en,en-GB;q=0.9,en-US;q=0.8",
+              "cache-control": "no-cache",
+              "content-type": "application/json;charset=UTF-8",
+              "pragma": "no-cache",
+              "priority": "u=1, i",
+              "sec-fetch-dest": "empty",
+              "sec-fetch-mode": "cors",
+              "sec-fetch-site": "same-origin"
+            },
+            "referrer": "https://www.blackmagicdesign.com/products/davinciresolve",
+            "body": "{\"platform\":\"Windows\",\"policy\":true,\"product\":\"DaVinci Resolve\",\"country\":\"us\",\"firstname\":\"-\",\"lastname\":\"-\",\"company\":\"-\",\"phone\":\"-\",\"street\":\"-\",\"city\":\"-\",\"state\":\"Alabama\",\"email\":\"-@-.com\",\"origin\":\"www.blackmagicdesign.com\"}",
+            "method": "POST",
+            "mode": "cors",
+            "credentials": "include"
+          }
+        }
+      },
+      {
+        "name": "HyperDeck",
+        "homepage": "https://www.blackmagicdesign.com/support/family/disk-recorders",
+        "version": {
+          "method": "html",
+          "pattern": "<article[^>]*software-download=\\\"(?<aux>[^\\\"]+)\\\"[^>]*name=\\\"(?:Blackmagic )?HyperDeck (?<version>[\\d\\.]+)(?: Update)?\\\"[^>]*>",
+          "url": "https://www.blackmagicdesign.com/support/partial/downloads"
+        },
+        "download": {
+          "method": "href",
+          "template": "https://www.blackmagicdesign.com/support/download/${aux}/Windows",
+          "selector": "a[ng-click=\"downloadNow()\"]"
+        }
+      },
+      {
+        "name": "MultiView",
+        "homepage": "https://www.blackmagicdesign.com/support/family/multiview-monitoring",
+        "version": {
+          "method": "html",
+          "pattern": "<article[^>]*software-download=\\\"(?<aux>[^\\\"]+)\\\"[^>]*name=\\\"(?:Blackmagic )?MultiView (?<version>[\\d\\.]+)(?: Update)?\\\"[^>]*>",
+          "url": "https://www.blackmagicdesign.com/support/partial/downloads"
+        },
+        "download": {
+          "method": "href",
+          "template": "https://www.blackmagicdesign.com/support/download/${aux}/Windows",
+          "selector": "a[ng-click=\"downloadNow()\"]"
+        }
+      },
+      {
+        "name": "SmartView",
+        "homepage": "https://www.blackmagicdesign.com/support/family/video-and-audio-monitoring",
+        "version": {
+          "method": "html",
+          "pattern": "<article[^>]*software-download=\\\"(?<aux>[^\\\"]+)\\\"[^>]*name=\\\"(?:Blackmagic )?SmartView (?<version>[\\d\\.]+)(?: Update)?\\\"[^>]*>",
+          "url": "https://www.blackmagicdesign.com/support/partial/downloads"
+        },
+        "download": {
+          "method": "href",
+          "template": "https://www.blackmagicdesign.com/support/download/${aux}/Windows",
+          "selector": "a[ng-click=\"downloadNow()\"]"
+        }
+      },
+      {
+        "name": "Streaming",
+        "homepage": "https://www.blackmagicdesign.com/support/family/streaming-and-encoding",
+        "version": {
+          "method": "html",
+          "pattern": "<article[^>]*software-download=\\\"(?<aux>[^\\\"]+)\\\"[^>]*name=\\\"(?:Blackmagic )?Streaming (?<version>[\\d\\.]+)(?: Update)?\\\"[^>]*>",
+          "url": "https://www.blackmagicdesign.com/support/partial/downloads"
+        },
+        "download": {
+          "method": "href",
+          "template": "https://www.blackmagicdesign.com/support/download/${aux}/Windows",
+          "selector": "a[ng-click=\"downloadNow()\"]"
+        }
+      },
+      {
+        "name": "Teranex Converter",
+        "homepage": "https://www.blackmagicdesign.com/support/family/standards-conversion",
+        "version": {
+          "method": "html",
+          "pattern": "<article[^>]*software-download=\\\"(?<aux>[^\\\"]+)\\\"[^>]*name=\\\"(?:Blackmagic )?Teranex (?<version>[\\d\\.]+)(?: Update)?\\\"[^>]*>",
+          "url": "https://www.blackmagicdesign.com/support/partial/downloads"
+        },
+        "download": {
+          "method": "href",
+          "template": "https://www.blackmagicdesign.com/support/download/${aux}/Windows",
+          "selector": "a[ng-click=\"downloadNow()\"]"
+        }
+      },
+      {
+        "name": "Video Assist",
+        "homepage": "https://www.blackmagicdesign.com/support/family/video-and-audio-monitoring",
+        "version": {
+          "method": "html",
+          "pattern": "<article[^>]*software-download=\\\"(?<aux>[^\\\"]+)\\\"[^>]*name=\\\"(?:Blackmagic )?Video Assist (?<version>[\\d\\.]+)(?: Update)?\\\"[^>]*>",
+          "url": "https://www.blackmagicdesign.com/support/partial/downloads"
+        },
+        "download": {
+          "method": "href",
+          "template": "https://www.blackmagicdesign.com/support/download/${aux}/Windows",
+          "selector": "a[ng-click=\"downloadNow()\"]"
+        }
+      },
+      {
+        "name": "Video",
+        "homepage": "https://www.blackmagicdesign.com/support/family/capture-and-playback",
+        "version": {
+          "method": "html",
+          "pattern": "<article[^>]*software-download=\\\"(?<aux>[^\\\"]+)\\\"[^>]*name=\\\"(?:Blackmagic )?Desktop Video (?<version>[\\d\\.]+)(?: Update)?\\\"[^>]*>",
+          "url": "https://www.blackmagicdesign.com/support/partial/downloads"
+        },
+        "download": {
+          "method": "href",
+          "template": "https://www.blackmagicdesign.com/support/download/${aux}/Windows",
+          "selector": "a[ng-click=\"downloadNow()\"]"
+        }
+      },
+      {
+        "name": "Videohub",
+        "homepage": "https://www.blackmagicdesign.com/support/family/routing-and-distribution",
+        "version": {
+          "method": "html",
+          "pattern": "<article[^>]*software-download=\\\"(?<aux>[^\\\"]+)\\\"[^>]*name=\\\"(?:Blackmagic )?Videohub (?<version>[\\d\\.]+)(?: Update)?\\\"[^>]*>",
+          "url": "https://www.blackmagicdesign.com/support/partial/downloads"
+        },
+        "download": {
+          "method": "href",
+          "template": "https://www.blackmagicdesign.com/support/download/${aux}/Windows",
+          "selector": "a[ng-click=\"downloadNow()\"]"
+        }
+      },
+      {
+        "name": "Web Presenter",
+        "homepage": "https://www.blackmagicdesign.com/support/family/streaming-and-encoding",
+        "version": {
+          "method": "html",
+          "pattern": "<article[^>]*software-download=\\\"(?<aux>[^\\\"]+)\\\"[^>]*name=\\\"(?:Blackmagic )?Web Presenter (?<version>[\\d\\.]+)(?: Update)?\\\"[^>]*>",
+          "url": "https://www.blackmagicdesign.com/support/partial/downloads"
+        },
+        "download": {
+          "method": "href",
+          "template": "https://www.blackmagicdesign.com/support/download/${aux}/Windows",
+          "selector": "a[ng-click=\"downloadNow()\"]"
+        }
+      }
+    ],
+    "Control": [
+      {
+        "name": "Barco EventMaster Toolset",
+        "homepage": "https://www.barco.com/en/support/software/08-1205100-00",
+        "version": {
+          "method": "json",
+          "usePuppeteer": true,
+          "url": "https://data.barco.com/api/TechDoc_GetTdeFiles?TdeTypes=3&productNumbers=R9009203&CountryCode=DE",
+          "find": {
+            "key": "title",
+            "value": "^Event Master toolset Win",
+            "version": "displayVersion"
+          }
+        },
+        "download": {
+          "method": "json",
+          "usePuppeteer": true,
+          "url": "https://data.barco.com/api/TechDoc_GetTDEFileDownloadUrl?FileNumber=${fileNumber}&TdeType=3&CountryCode=DE&isChina=false",
+          "find": {
+            "download": "downloadUrl"
+          }
+        }
+      },
+      {
+        "name": "Bitfocus Companion",
+        "homepage": "https://bitfocus.io/companion",
+        "version": {
+          "method": "json",
+          "url": "https://api.bitfocus.io/v1/product",
+          "find": {
+            "key": "name",
+            "value": "^Companion$",
+            "child": "package:stable:win-x64",
+            "version": "version"
+          }
+        },
+        "download": {
+          "method": "cachedjson",
+          "url": "https://api.bitfocus.io/v1/product",
+          "find": {
+            "download": "url"
+          }
+        }
+      },
+      {
+        "name": "Companion Offline Module Bundle",
+        "homepage": "https://bitfocus.io/companion",
+        "version": {
+          "method": "json",
+          "url": "https://api.bitfocus.io/v1/product",
+          "find": {
+            "key": "name",
+            "value": "^Companion Offline Module Bundle$",
+            "child": "package:stable:generic",
+            "version": "version"
+          }
+        },
+        "download": {
+          "method": "cachedjson",
+          "url": "https://api.bitfocus.io/v1/product",
+          "find": {
+            "download": "url"
+          }
+        }
+      },
+      {
+        "name": "Elgato Stream Deck",
+        "homepage": "https://www.elgato.com/de/en/s/downloads",
+        "version": {
+          "method": "json",
+          "url": "https://live.elgato.webscale.site/graphql?query=query%20contentJson(%24identifier%3A%5BString%5D%24contentType%3AString%24options%3AContentJsonOptionsInput)%7BcontentJson(identifiers%3A%24identifier%20contentType%3A%24contentType%20options%3A%24options)%7Bidentifier%20entries%7D%7D&operationName=contentJson&variables=%7B%22contentType%22%3A%22downloads%22%2C%22identifier%22%3A%5B%22downloads%22%5D%2C%22options%22%3A%7B%22level%22%3A1%7D%7D&locale=en-US",
+          "opts": {
+            "method": "GET",
+            "headers": {
+              "accept": "application/json",
+              "locale": "en",
+              "location": "de",
+              "region": "US",
+              "store": "default",
+              "x-pylot-backend": "elgato",
+              "x-pylot-query": "contentJson"
+            },
+            "referrer": "https://www.elgato.com/"
+          },
+          "find": {
+            "key": "sd-win",
+            "child": "sd-win",
+            "version": "version"
+          }
+        },
+        "download": {
+          "method": "cachedjson",
+          "url": "https://live.elgato.webscale.site/graphql?query=query%20contentJson(%24identifier%3A%5BString%5D%24contentType%3AString%24options%3AContentJsonOptionsInput)%7BcontentJson(identifiers%3A%24identifier%20contentType%3A%24contentType%20options%3A%24options)%7Bidentifier%20entries%7D%7D&operationName=contentJson&variables=%7B%22contentType%22%3A%22downloads%22%2C%22identifier%22%3A%5B%22downloads%22%5D%2C%22options%22%3A%7B%22level%22%3A1%7D%7D&locale=en-US",
+          "find": {
+            "download": "downloadURL"
+          }
+        }
+      },
+      {
+        "name": "Universe Control",
+        "homepage": "https://universe-control.com/universe-control-software/",
+        "version": {
+          "method": "html",
+          "pattern": "v\\.(?<version>[\\d\\.]+)",
+          "url": "https://universe-control.com/archiv/#changelog"
+        },
+        "download": {
+          "method": "template",
+          "template": "https://universe-control.com/Data/UNIVERSE_${version}_Setup.exe"
+        }
+      }
+    ],
+    "Media": [
+      {
+        "name": "ffmpeg",
+        "homepage": "https://www.gyan.dev/ffmpeg/builds/",
+        "version": {
+          "method": "github",
+          "repo": "GyanD/codexffmpeg"
+        },
+        "download": {
+          "method": "github",
+          "match": "full_build.zip"
+        }
+      },
+      {
+        "name": "K-Lite Codec Pack Mega",
+        "homepage": "https://codecguide.com/download_k-lite_codec_pack_mega.htm",
+        "version": {
+          "method": "html",
+          "pattern": "Version (?<version>[\\d\\.]+).*?Filename.*? (?<aux>\\S+?.exe)"
+        },
+        "download": {
+          "method": "template",
+          "template": "https://files2.codecguide.com/${aux}"
+        }
+      },
+      {
+        "name": "Kdenlive",
+        "homepage": "https://kdenlive.org/en/download/",
+        "version": {
+          "method": "html",
+          "pattern": "kdenlive-(?<version>[\\d\\.-]+)\\.exe"
+        },
+        "download": {
+          "method": "template",
+          "template": "https://download.kde.org/stable/kdenlive/${majorVersion}.${minorVersion}/windows/kdenlive-${version}.exe"
+        }
+      },
+      {
+        "name": "mpc-hc",
+        "homepage": "https://github.com/clsid2/mpc-hc",
+        "version": {
+          "method": "github",
+          "repo": "clsid2/mpc-hc"
+        },
+        "download": {
+          "method": "github",
+          "match": "x64.zip"
+        }
+      },
+      {
+        "name": "Shutter Encoder",
+        "homepage": "https://www.shutterencoder.com/",
+        "version": {
+          "method": "html",
+          "pattern": "Shutter Encoder (?<version>[\\d\\.]+) Windows 64bits\\.(?:zip|exe)",
+          "url": "https://www.shutterencoder.com/en/"
+        },
+        "download": {
+          "method": "template",
+          "template": "https://www.shutterencoder.com/Shutter%20Encoder%20${version}%20Windows%2064bits.zip"
+        }
+      },
+      {
+        "name": "VLC",
+        "homepage": "https://www.videolan.org/vlc/download-windows.html",
+        "version": {
+          "method": "html",
+          "pattern": "<span\\s+id=[\"']downloadVersion[\"'][^>]*>\\s*(?<version>\\d+(?:\\.\\d+)+)"
+        },
+        "download": {
+          "method": "template",
+          "template": "https://download.videolan.org/pub/vlc/${version}/win64/vlc-${version}-win64.exe"
+        }
+      }
+    ],
+    "Network": [
+      {
+        "name": "angryip ipscan",
+        "homepage": "https://angryip.org/download/#windows",
+        "version": {
+          "method": "github",
+          "repo": "angryip/ipscan"
+        },
+        "download": {
+          "method": "github",
+          "match": "win64"
+        }
+      },
+      {
+        "name": "NDI Tools",
+        "homepage": "https://ndi.video/tools/download/",
+        "version": {
+          "method": "html",
+          "pattern": "Version (?<version>\\d+[\\d\\.]+)"
+        },
+        "download": {
+          "method": "template",
+          "template": "https://downloads.ndi.tv/Tools/NDI%206%20Tools.exe"
+        }
+      },
+      {
+        "name": "PuTTY",
+        "homepage": "https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html",
+        "version": {
+          "method": "html",
+          "pattern": "latest release \\((?<version>[\\d\\.]+)\\)"
+        },
+        "download": {
+          "method": "template",
+          "template": "https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-${version}-installer.msi"
+        }
+      },
+      {
+        "name": "TeamViewer",
+        "homepage": "https://www.teamviewer.com/en-us/download/windows/",
+        "version": {
+          "method": "html",
+          "pattern": "Current version: (?<version>[\\d\\.]+)",
+          "url": "https://www.teamviewer.com/en-us/download/portal/windows/"
+        },
+        "download": {
+          "method": "template",
+          "template": "https://download.teamviewer.com/download/TeamViewer_Setup_x64.exe"
+        }
+      },
+      {
+        "name": "TeamViewer Host",
+        "homepage": "https://www.teamviewer.com/en-us/download/windows/",
+        "version": {
+          "method": "html",
+          "pattern": "Current version: (?<version>[\\d\\.]+)",
+          "url": "https://www.teamviewer.com/en-us/download/portal/windows/"
+        },
+        "download": {
+          "method": "template",
+          "template": "https://download.teamviewer.com/download/TeamViewer_Host_Setup_x64.exe"
+        }
+      },
+      {
+        "name": "UltraVNC",
+        "homepage": "https://uvnc.com/downloads/ultravnc.html",
+        "version": {
+          "method": "html",
+          "pattern": "Latest release version: UltraVNC (?<version>[\\d\\.]+)"
+        },
+        "download": {
+          "method": "template",
+          "template": "https://uvnc.eu/download/${cleanVersion}/UltraVNC_${cleanVersion}_x64_Setup.exe"
+        }
+      },
+      {
+        "name": "Wireshark",
+        "homepage": "https://www.wireshark.org/download.html",
+        "version": {
+          "method": "html",
+          "pattern": "Stable Release: (?<version>[\\d\\.]+)"
+        },
+        "download": {
+          "method": "template",
+          "template": "https://2.na.dl.wireshark.org/win64/Wireshark-${version}-x64.exe"
+        }
+      },
+      {
+        "name": "WOL2",
+        "homepage": "https://oette.wordpress.com/wol2/",
+        "version": {
+          "method": "html",
+          "pattern": "WOL (?<version>[\\d\\.]+) \\(7-Zip\\)"
+        },
+        "download": {
+          "method": "template",
+          "template": "https://cds.oette.info/download/WOL2.7z"
+        }
+      }
+    ],
+    "Pixera": [
+      {
+        "name": "AV Stumpfl EDIDs",
+        "homepage": "https://help.pixera.one/graphic-cards/edid-presets",
+        "version": {
+          "method": "noversion"
+        },
+        "download": {
+          "method": "href",
+          "url": "https://help.pixera.one/graphic-cards/edid-presets",
+          "selector": "a[download=\"file\"]"
+        }
+      },
+      {
+        "name": "Pixera",
+        "homepage": "https://pixera.one/en/downloads/",
+        "version": {
+          "method": "redirect",
+          "url": "https://update.avstumpfl.com/pixera/release/latest",
+          "pattern": "pixera_setup_(?<version>[\\d-_R]+).exe"
+        },
+        "download": {
+          "method": "redirect"
+        }
+      },
+      {
+        "name": "PixeraHub",
+        "homepage": "https://avstumpfl.com/en/downloads/",
+        "version": {
+          "method": "redirect",
+          "url": "https://update.avstumpfl.com/pixera-hub/latest",
+          "pattern": "Pixera\\+Hub\\+Setup\\+(?<version>[\\d\\.]+).exe"
+        },
+        "download": {
+          "method": "redirect"
+        }
+      }
+    ],
+    "Setup": [
+      {
+        "name": "Aja Mini Config",
+        "homepage": "https://www.aja.com/products/mini-config-software#support",
+        "version": {
+          "method": "html",
+          "pattern": "href=\"https:\\/\\/www\\.aja\\.com\\/support\\/item-download\\/(?<aux>\\d+)\\/Mini_Config_v(?<version>[\\d\\.]+)_Windows\\.zip\""
+        },
+        "download": {
+          "method": "template",
+          "template": "https://www.aja.com/assets/support/files/${aux}/en/Mini_Config_v${version}_Windows.zip"
+        }
+      },
+      {
+        "name": "AW Browser",
+        "homepage": "https://www.analogway.com/products/ascender-16-4k",
+        "version": {
+          "method": "html",
+          "pattern": "AW Browser - Software v(?<version>[\\d\\.]+) \\(Windows\\)"
+        },
+        "download": {
+          "method": "template",
+          "template": "https://s3.eu-west-3.amazonaws.com/aw.store01/Site+Internet/Software/AW+Browser/Software/aw_browser_v${underscoreVersion}.exe"
+        }
+      },
+      {
+        "name": "AW EDID Editor",
+        "homepage": "https://www.analogway.com/products/aw-edid-editor",
+        "version": {
+          "method": "html",
+          "pattern": "AW EDID Editor for Windows \\(v\\.(?<version>[\\d\\.]+)\\)"
+        },
+        "download": {
+          "method": "template",
+          "template": "https://s3.eu-west-3.amazonaws.com/aw.store01/Site+Internet/Software/AW+EDID+Editor/Software/Setup+Application/aw_edid_editor_v${underscoreVersion}_windows.zip"
+        }
+      },
+      {
+        "name": "AW Screen Frame Cutter",
+        "homepage": "https://www.analogway.com/products/aw-screen-frame-cutter",
+        "version": {
+          "method": "html",
+          "pattern": "AW Screen Frame Cutter for Windows \\(V(?<version>[\\d\\.]+)\\)"
+        },
+        "download": {
+          "method": "template",
+          "template": "https://s3.eu-west-3.amazonaws.com/aw.store01/Site+Internet/Software/AW+Screen+Frame+Cutter/Software/Setup+application/setupawscreenframecutter_v${paddedVersion}-windows.zip"
+        }
+      },
+      {
+        "name": "BrightSign BrightAuthor",
+        "homepage": "https://www.brightsign.biz/resources/software-downloads/",
+        "version": {
+          "method": "html",
+          "pattern": "brightAuthor classic[\\s\\S]+?Latest Release: (?<version>[\\d\\.]+)"
+        },
+        "download": {
+          "method": "template",
+          "template": "https://brightsignbiz.s3.amazonaws.com/brightauthor/${majorVersion}.${minorVersion}/${version}/BrightAuthorSetup-${version}.exe"
+        }
+      },
+      {
+        "name": "Dante Controller",
+        "homepage": "https://www.getdante.com/support/software-downloads/",
+        "version": {
+          "method": "html",
+          "pattern": "Dante Controller v(?<version>[\\d\\.]+) Package \\(Windows\\)"
+        },
+        "download": {
+          "method": "template",
+          "template": "https://audinate-software-updates.sgp1.cdn.digitaloceanspaces.com/DanteController/${majorVersion}/${majorVersion}.${minorVersion}/DanteController-${version}_windows.exe"
+        }
+      },
+      {
+        "name": "Datapath VisionInstall",
+        "homepage": "https://www.datapathsoftware.com/downloads/?_sft_releases=current&_sft_product_category=vision-capture-cards",
+        "version": {
+          "method": "html",
+          "pattern": "VisionInstall v(?<version>[\\d\\.]+)"
+        },
+        "download": {
+          "method": "template",
+          "template": "https://www.datapathsoftware.com/supportdownloads/windows/driver-files/visioninstall/VisionInstall_v${cleanVersion}.exe"
+        }
+      },
+      {
+        "name": "Datapath WallDesigner",
+        "homepage": "https://www.datapathsoftware.com/downloads/?_sft_releases=current&_sft_product_category=x-series-multi-display",
+        "version": {
+          "method": "html",
+          "pattern": "Wall Designer v(?<version>[\\d\\.]+)"
+        },
+        "download": {
+          "method": "template",
+          "template": "https://www.datapathsoftware.com/supportdownloads/windows/driver-files/walldesigner/Wall%20Designer%20${version}.exe"
+        }
+      },
+      {
+        "name": "Fohhn AudioSoft",
+        "homepage": "https://cloud.fohhn.com/en/fas-dl-ready",
+        "version": {
+          "method": "html",
+          "pattern": "href\\s*=\\s*[\"'](?<aux>[^\"']*\\/hs\\/cta\\/[^\"']+)[\"'].*?Version (?<version>[\\d\\.]+) for x"
+        },
+        "download": {
+          "method": "iframe",
+          "url": "https://cloud.fohhn.com/en/fas-dl-ready",
+          "selector": "a.interactive-button"
+        }
+      },
+      {
+        "name": "GreenGo Control",
+        "homepage": "https://www.greengocom.com/software-products/control",
+        "version": {
+          "method": "html",
+          "pattern": "href=\"\\S*?\\/(?<version>[\\d\\.]+)\\/windows\\S*?\""
+        },
+        "download": {
+          "method": "template",
+          "template": "https://downloads.greengoconnect.com/${version}/windows/green-go-control.msi"
+        }
+      },
+      {
+        "name": "IO module Utility (ADAM)",
+        "homepage": "https://www.advantech.com/en-eu/support/details/utility?id=1-2AKUDB",
+        "version": {
+          "method": "html",
+          "pattern": "Advantech_IO_module_Utility_(?<version>V[\\d\\.]+)"
+        },
+        "download": {
+          "method": "href",
+          "url": "https://www.advantech.com/en-eu/support/details/utility?id=1-2AKUDB",
+          "selector": "div.download-item"
+        }
+      },
+      {
+        "name": "NovaStar CoexVMP",
+        "homepage": "https://www.novastar.tech/download/download.html",
+        "version": {
+          "method": "html",
+          "url": "https://www.novastar.tech/download/data.html?catid=7&typeid=156",
+          "pattern": "COEX VMP Win (?<version>[\\d\\.]+)"
+        },
+        "download": {
+          "method": "template",
+          "template": "https://en-website001.oss-us-east-1.aliyuncs.com/Coex%20VMP%20V${version}_Windows.zip"
+        }
+      },
+      {
+        "name": "NovaStar NovaLCT",
+        "homepage": "https://www.novastar.tech/download/download.html",
+        "version": {
+          "method": "html",
+          "url": "https://www.novastar.tech/download/data.html?catid=7&typeid=156",
+          "pattern": "NovaLCT V(?<version>[\\d\\.]+)"
+        },
+        "download": {
+          "method": "template",
+          "template": "https://en-website001.oss-us-east-1.aliyuncs.com/NovaLCT%20V${version}.zip"
+        }
+      },
+      {
+        "name": "NovaStar SmartLCT",
+        "homepage": "https://novastar.shop/downloads/",
+        "version": {
+          "method": "html",
+          "pattern": "SmartLCT Win (?<version>[\\d\\.]+)"
+        },
+        "download": {
+          "method": "template",
+          "template": "https://oss.novastar.tech/SmartLCTV${version}_Windows.zip"
+        }
+      },
+      {
+        "name": "PixelHue PixelFlow",
+        "homepage": "https://www.pixelhue.com/index.php/Content/index/catid/7/id/0.html",
+        "version": {
+          "method": "json",
+          "url": "https://www.pixelhue.com/index.php/Content/downListAjax.html",
+          "find": {
+            "key": "file_name",
+            "value": "^PixelFlow Windows$",
+            "version": "version"
+          }
+        },
+        "download": {
+          "method": "cachedjson",
+          "url": "https://www.pixelhue.com/index.php/Content/downListAjax.html",
+          "find": {
+            "download": "file_url"
+          }
+        }
+      },
+      {
+        "name": "Shure Wireless Workbench",
+        "homepage": "https://www.shure.com/en-US/products/software/wwb?variant=WWB",
+        "version": {
+          "method": "html",
+          "url": "https://www.shure.com/en-US/support/downloads/software-firmware-archive/wireless-workbench",
+          "pattern": "Versions.*?>(?<version>[\\d\\.]+)<"
+        },
+        "download": {
+          "method": "template",
+          "template": "https://content-files.shure.com/Software/wireless-workbench/${dashVersion}/Wireless-Workbench-Windows-${version}.exe"
+        }
+      }
+    ],
+    "Utilities": [
+      {
+        "name": "7zip",
+        "homepage": "https://7-zip.org/",
+        "version": {
+          "method": "github",
+          "repo": "ip7z/7zip"
+        },
+        "download": {
+          "method": "github",
+          "match": "x64.exe"
+        }
+      },
+      {
+        "name": "AutoHideMouseCursor",
+        "homepage": "https://www.softwareok.de/?seite=Microsoft/AutoHideMouseCursor",
+        "version": {
+          "method": "html",
+          "pattern": "Version (?<version>[\\d\\.]+)"
+        },
+        "download": {
+          "method": "template",
+          "template": "https://www.softwareok.de/Download/AutoHideMouseCursor_x64_Portable.zip"
+        }
+      },
+      {
+        "name": "FileConverter",
+        "homepage": "https://file-converter.io/",
+        "version": {
+          "method": "github",
+          "repo": "Tichau/FileConverter"
+        },
+        "download": {
+          "method": "github",
+          "match": "x64-setup.msi"
+        }
+      },
+      {
+        "name": "Monitor Asset Manager",
+        "homepage": "https://www.entechtaiwan.com/util/moninfo.shtm",
+        "version": {
+          "method": "html",
+          "pattern": "Monitor Asset Manager (?<version>[\\d\\.]+)"
+        },
+        "download": {
+          "method": "template",
+          "template": "https://www.entechtaiwan.com/files/mi_setup.exe"
+        }
+      },
+      {
+        "name": "Notepad++",
+        "homepage": "https://notepad-plus-plus.org/downloads/",
+        "version": {
+          "method": "github",
+          "repo": "notepad-plus-plus/notepad-plus-plus"
+        },
+        "download": {
+          "method": "github",
+          "match": "Installer.x64.exe"
+        }
+      },
+      {
+        "name": "OBS Studio",
+        "homepage": "https://obsproject.com/download",
+        "version": {
+          "method": "github",
+          "repo": "obsproject/obs-studio"
+        },
+        "download": {
+          "method": "github",
+          "match": "Windows-x64-Installer.exe"
+        }
+      },
+      {
+        "name": "ontime",
+        "homepage": "https://getontime.no/",
+        "version": {
+          "method": "github",
+          "repo": "cpvalente/ontime"
+        },
+        "download": {
+          "method": "github",
+          "match": "win64.exe"
+        }
+      },
+      {
+        "name": "pixl Grid 2 (Beta)",
+        "homepage": "https://videowalrus.com/projects/pixl-grid",
+        "version": {
+          "method": "html",
+          "url": "https://www.videowalrus.com/projects/pixl-grid",
+          "pattern": "<span id=\"rel-version\">(?<version>[\\d\\.]+)</span>"
+        },
+        "download": {
+          "method": "template",
+          "template": "https://videowalrus-releases.s3.us-east-1.amazonaws.com/pixlGrid2-Setup-${version}.exe"
+        }
+      },
+      {
+        "name": "Sysinternals Suite",
+        "homepage": "https://learn.microsoft.com/en-us/sysinternals/",
+        "version": {
+          "method": "html",
+          "pattern": "ms.date: (?<version>\\d{2}\\/\\d{2}\\/\\d{4})",
+          "url": "https://raw.githubusercontent.com/MicrosoftDocs/sysinternals/live/sysinternals/downloads/sysinternals-suite.md"
+        },
+        "download": {
+          "method": "template",
+          "template": "https://download.sysinternals.com/files/SysinternalsSuite.zip"
+        }
+      },
+      {
+        "name": "USBTreeView",
+        "homepage": "https://www.uwe-sieber.de/usbtreeview_e.html",
+        "version": {
+          "method": "html",
+          "pattern": "Latest History[\\s\\S\\n]*?V(?<version>[\\d\\.]+)"
+        },
+        "download": {
+          "method": "template",
+          "template": "https://www.uwe-sieber.de/files/UsbTreeView_x64.zip"
+        }
+      },
+      {
+        "name": "WinDirStat",
+        "homepage": "https://windirstat.net",
+        "version": {
+          "method": "github",
+          "repo": "windirstat/windirstat"
+        },
+        "download": {
+          "method": "github",
+          "match": "x64.msi"
+        }
+      }
+    ],
+    "Webbrowsers": [
+      {
+        "name": "Google Chrome",
+        "homepage": "https://www.google.com/chrome/",
+        "version": {
+          "method": "html",
+          "pattern": "<stable64><version>(?<version>[\\d\\.]+)<\\/version>.+release2\\/chrome\\/(?<aux>[\\w-]+)_.+<\\/stable64>",
+          "url": "https://scoopinstaller.github.io/UpdateTracker/googlechrome/chrome.min.xml"
+        },
+        "download": {
+          "method": "template",
+          "template": "https://dl.google.com/release2/chrome/${aux}_${version}/${version}_chrome_installer_uncompressed.exe"
+        }
+      },
+      {
+        "name": "Mozilla Firefox",
+        "homepage": "https://www.mozilla.org/en-US/firefox/all/desktop-release/",
+        "version": {
+          "method": "json",
+          "url": "https://product-details.mozilla.org/1.0/firefox_versions.json",
+          "find": {
+            "version": "LATEST_FIREFOX_VERSION",
+            "baseurl": "https://download-installer.cdn.mozilla.net/pub/firefox/releases/${version}/win64/en-US/Firefox%20Setup%20${version}.exe"
+          }
+        },
+        "download": {
+          "method": "template",
+          "template": "https://download-installer.cdn.mozilla.net/pub/firefox/releases/${version}/win64/en-US/Firefox%20Setup%20${version}.exe"
+        }
+      }
+    ]
+  }
+}
